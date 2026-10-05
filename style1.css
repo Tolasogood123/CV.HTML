@@ -1,0 +1,142 @@
+/* ---------- Base ---------- */
+:root {
+  --text: #333;
+  --muted: #555;
+  --contact: #444;
+  --green: #2e7d32;
+  --navy: #1a237e;
+  --border: #ddd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0;
+}
+
+.resume {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* ---------- Header ---------- */
+.resume-header {
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+.resume-header h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #000;
+  margin: 0 0 15px 0;
+}
+
+.job-title {
+  color: var(--green);
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0;
+}
+
+/* ---------- Contact & avatar ---------- */
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.contact address {
+  font-style: normal;
+  font-size: 14px;
+  color: var(--contact);
+}
+
+.contact address p {
+  margin: 0 0 4px 0;
+}
+
+.contact a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact a:hover,
+.contact a:focus-visible {
+  text-decoration: underline;
+}
+
+.avatar {
+  display: block;
+  max-width: 140px;
+  height: auto;
+}
+
+/* ---------- Section headings ---------- */
+h2 {
+  color: var(--green);
+  font-size: 18px;
+  font-weight: bold;
+  margin: 25px 0 12px 0;
+}
+
+h3 {
+  color: var(--navy);
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 0 4px 0;
+}
+
+/* ---------- Content ---------- */
+section p,
+article p {
+  font-size: 14px;
+  margin: 0 0 15px 0;
+}
+
+.date {
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+article ul {
+  margin: 0 0 12px 20px;
+  padding: 0;
+  font-size: 14px;
+}
+
+article li {
+  margin-bottom: 4px;
+}
+
+/* ---------- Footer ---------- */
+.resume-footer {
+  border-top: 1px solid var(--border);
+  margin-top: 40px;
+  padding-top: 15px;
+  font-size: 12px;
+  color: #666;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 480px) {
+  .contact {
+    flex-direction: column-reverse;
+  }
+}
+
+/* ---------- Print ---------- */
+@media print {
+  .resume {
+    padding: 0;
+  }
+}
